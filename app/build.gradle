@@ -29,7 +29,7 @@ android {
         applicationId "com.example.marvelapp"
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 1
+        versionCode 1sta
         versionName " 1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -44,10 +44,10 @@ android {
             applicationIdSuffix '.debug'
             debuggable true
         }
-        stagging {
+        staging {
             initWith debug
             minifyEnabled true
-            applicationIdSuffix '.stagging'
+            applicationIdSuffix '.staging'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-rules-staging.pro'
         }
         release {
