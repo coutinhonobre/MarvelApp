@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.gms.google-services'
 }
 
 apply plugin: 'kotlin-kapt'
@@ -18,7 +19,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('/Users/coutinhonobre/AndroidStudioProjects/curso-android-marvel-app/store/marvel_app_key_store')
+            storeFile file('../store/marvel_app_key_store')
             storePassword 'marvel@123'
             keyAlias 'marvel-app'
             keyPassword 'marvel@123'
@@ -128,6 +129,13 @@ dependencies {
     // Instrumentation tests
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    def fragment_version = "1.4.0"
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
+
+    // Import the firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
 
 }
